@@ -1,6 +1,1 @@
-export const cropViewport = () => {
-    document.documentElement.classList.toggle('crop-viewport');
-    document.body.classList.toggle('crop-viewport');
-var multiplyFive = function (number) {
-    return number * 5;
-}
+
