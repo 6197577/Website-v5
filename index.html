@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Character Set and Viewport (Essential) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO and Metadata -->
+    <title>Electric Drs - Proactive Electrical Risk Audits</title>
+    <meta name="description" content="Identify and mitigate hidden financial risks in your facility's electrical system with a comprehensive on-site audit from Electric Drs. Prevent costly downtime.">
+    <link rel="canonical" href="https://www.electricdrs.com"> <!-- Replace with your actual domain -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Open Graph / Social Media Sharing -->
+    <meta property="og:title" content="Electric Drs - Proactive Electrical Risk Audits">
+    <meta property="og:description" content="Is your electrical system a ticking time bomb? Discover hidden financial risks before they cause catastrophic downtime.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.electricdrs.com"> <!-- Replace with your actual domain -->
+    <meta property="og:image" content="https://www.electricdrs.com/og-image.jpg"> <!-- Replace with a compelling image URL -->
+
+    <!-- External Libraries (CDNs) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-900">
+                Electric Drs
+            </div>
+            <div class="hidden md:flex space-x-8" aria-label="Main navigation">
+                <a href="#problem" class="text-gray-600 hover:text-blue-800 transition">The Problem</a>
+                <a href="#solution" class="text-gray-600 hover:text-blue-800 transition">Our Solution</a>
+                <a href="#investment" class="text-gray-600 hover:text-blue-800 transition">Your Investment</a>
+            </div>
+            <a href="#contact" class="bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 transition shadow-sm">Schedule Audit</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-blue-900 text-white text-center py-20 px-6">
+            <div class="container mx-auto">
+                <h1 class="text-4xl md:text-6xl font-black mb-4">Is Your Electrical System a Ticking Time Bomb?</h1>
+                <p class="text-xl md:text-2xl text-blue-200 max-w-4xl mx-auto">
+                    Discover your facility's hidden financial risks before they bring your operations to a standstill.
+                </p>
+            </div>
+        </section>
+
+        <section id="problem" class="py-20 px-6 bg-white" aria-labelledby="problem-heading">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 id="problem-heading" class="text-3xl md:text-4xl font-bold text-gray-800">The Staggering Cost of Inaction</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                        An unplanned outage is never just a flicker of the lights. It's a cascade of financial losses that impacts every part of your business. Below, you can calculate the potential impact based on your facility's revenue.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-200">
+                        <h3 class="text-2xl font-bold mb-4">Downtime Cost Calculator</h3>
+                        <p class="text-gray-600 mb-6">
+                            Enter your facility's estimated hourly revenue to see how quickly the costs of an outage multiply. The chart will update instantly.
+                        </p>
+
+                        <label for="hourlyRevenue" class="block text-sm font-medium text-gray-700">Estimated Hourly Revenue ($)</label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
+                                <span class="text-gray-500 sm:text-sm">$</span>
+                            </div>
+                            <input type="number" id="hourlyRevenue" name="hourly_revenue" class="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="260000" value="260000" aria-label="Estimated Hourly Revenue in US Dollars">
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-semibold text-gray-700">Key Industry Facts:</h4>
+                            <ul class="mt-4 space-y-4">
+                                <li class="flex items-start">
+                                    <span class="text-orange-500 font-bold text-2xl mr-3" aria-hidden="true">&#10148;</span>
+                                    <div>
+                                        Power-related failures are the <strong>#1 cause of critical outages</strong>, responsible for over 40% of incidents.
+                                        <a href="https://uptimeinstitute.com/resources/research-and-reports/uptime-institute-global-data-center-survey-2023-results" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline">[Source: Uptime Institute]</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <div class="chart-container">
+                            <canvas id="downtimeChart" role="img" aria-label="Bar chart showing the escalating cost of downtime over 1, 4, 8, and 24 hours based on the entered hourly revenue."></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="py-20 px-6 bg-gray-50" aria-labelledby="solution-heading">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 id="solution-heading" class="text-3xl md:text-4xl font-bold text-gray-800">Our Solution: The Manual Risk Audit</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                        We provide the intelligence you need to move from a reactive to a proactive maintenance strategy. Our comprehensive on-site assessment is designed to identify your most critical vulnerabilities before they lead to failure.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service cards with aria-hidden for decorative icons -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-blue-800">
+                        <div class="text-blue-800 text-5xl mb-4 mx-auto w-fit" aria-hidden="true">&#128269;</div>
+                        <h3 class="text-xl font-bold mb-2">On-Site Inspection</h3>
+                        <p class="text-gray-600">A thorough visual inspection of your main switchgear, critical panels, and major asset connections to identify obvious signs of wear, damage, or improper installation.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-blue-800">
+                        <div class="text-blue-800 text-5xl mb-4 mx-auto w-fit" aria-hidden="true">&#127777;</div>
+                        <h3 class="text-xl font-bold mb-2">Thermal Imaging</h3>
+                        <p class="text-gray-600">We use non-invasive thermal cameras to identify hidden "hot spots" caused by loose connections or overloaded circuits—major precursors to fire and failure.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-blue-800">
+                        <div class="text-blue-800 text-5xl mb-4 mx-auto w-fit" aria-hidden="true">&#128220;</div>
+                        <h3 class="text-xl font-bold mb-2">Documentation Review</h3>
+                        <p class="text-gray-600">Analysis of your existing electrical schematics and maintenance logs to find systemic issues, outdated designs, and compliance gaps that could pose a risk.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-blue-800">
+                        <div class="text-blue-800 text-5xl mb-4 mx-auto w-fit" aria-hidden="true">&#128203;</div>
+                        <h3 class="text-xl font-bold mb-2">Actionable Risk Report</h3>
+                        <p class="text-gray-600">You receive a detailed 10-page report with photographic evidence, analysis, and a prioritized list of remediation steps to immediately improve your facility's reliability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="investment" class="py-20 px-6 bg-white" aria-labelledby="investment-heading">
+            <div class="container mx-auto text-center">
+                <h2 id="investment-heading" class="text-3xl md:text-4xl font-bold text-gray-800">A Small Investment in Certainty</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                    Compare the minor, one-time cost of our audit to the massive, compounding cost of a single hour of unplanned downtime. A proactive investment today prevents a catastrophic expense tomorrow.
+                </p>
+                <div class="mt-12 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="w-full md:w-1/3 text-center p-6 bg-blue-50 rounded-lg border-2 border-blue-600">
+                        <h3 class="text-xl font-bold text-blue-900">Our Audit Cost</h3>
+                        <p class="text-5xl font-black text-blue-800 my-4">$2,500</p>
+                        <p class="text-gray-600 font-medium">One-Time Fixed Fee</p>
+                    </div>
+                    <div class="text-4xl font-black text-gray-400" aria-hidden="true">VS</div>
+                    <div class="w-full md:w-1/3 text-center p-6 bg-red-50 rounded-lg border-2 border-red-600">
+                        <h3 class="text-xl font-bold text-red-900">1 Hour of Downtime</h3>
+                        <p class="text-5xl font-black text-red-800 my-4">$260,000+</p>
+                        <p class="text-gray-600 font-medium">Average Industry Cost</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-blue-900 text-white" aria-labelledby="contact-heading">
+            <div class="container mx-auto py-20 px-6 text-center">
+                <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold">Don't Wait for the Lights to Go Out.</h2>
+                <p class="text-lg text-blue-200 mt-4 mb-8 max-w-2xl mx-auto">
+                    Take the first step towards operational certainty. Our team is ready to help you identify and mitigate your facility's electrical risks.
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <a href="tel:304-410-9208" class="bg-white text-blue-900 font-bold text-lg py-4 px-8 rounded-lg hover:bg-gray-200 transition shadow-lg w-full md:w-auto">Call Us: (304) 410-9208</a>
+                    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ300hfNvUK34rsuKNtMym5FwP_snEXM0kxp0mPlmdmXb3Kh8YNdVjGCCPV5VEjMvn9NitRnhAUw?gv=true" class="bg-orange-500 text-white font-bold text-lg py-4 px-8 rounded-lg hover:bg-orange-600 transition shadow-lg w-full md:w-auto" target="_blank" rel="noopener noreferrer">Book Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 py-6">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2025 Electric Drs, All Rights Reserved.</p>
+            <p>Charleston, WV | We have your cure 24/7</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript file -->
+    <script src="app.js" defer></script>
+
+</body>
+</html>

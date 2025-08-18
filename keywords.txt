@@ -1,0 +1,45 @@
+{
+    "name": "electric-drs-risk-audit",
+    "version": "1.0.0",
+    "description": "Interactive risk audit website to calculate and visualize the cost of electrical downtime.",
+    "main": "index.html",
+    "scripts": {
+    
+        "start": "echo \"To start, open index.html in your browser. For a better development experience, consider installing a live server extension in your code editor.\"",
+        "deploy": "vercel --prod"
+    },
+    "keywords": [
+        "electric",
+        "risk-audit",
+        "downtime",
+        "calculator",
+        "static-site"
+        "electric-repair"
+        "electric-maintenance
+        "electrical-maintenance"
+        "energy-audit"
+        "electrical-inspection"
+        "electric-inspection"
+        "West-Virginia"
+        "Charleston"
+        "Teays Valley"
+        "Nitro"
+        "Cross Lanes"
+        "Institute"
+        "Saint Albans"
+        "Tornado"
+        "Barboursville"
+        "Milton"
+        "Huntington"
+        "Kentucky"
+        "Ohio"
+        "Virginia"
+        "North Carolina"
+        "South Carolina"
+        "Tennessee"
+        "Florida"
+        "Gainesville"
+        "Interlachen"],
+    "author": "Electric Drs",
+    "license": "UNLICENSED"
+}
