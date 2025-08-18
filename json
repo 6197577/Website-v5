@@ -1,5 +1,4 @@
-{
-  "name": "electric-drs-risk-audit",
+{"name": "electric-drs-risk-audit",
   "version": "5.0.0",
   "description": "Interactive risk audit website to calculate and visualize the cost of electrical downtime.",
   "main": "index.html",
@@ -15,5 +14,4 @@
     "static-site"
   ],
   "author": "Electric Drs",
-  "license": "copyright 2025"
-}
+  "license": "copyright 2025"}
